@@ -17,8 +17,7 @@ Either clone this repository or fork it on GitHub and clone your fork:
 1) git clone https://github.com/Kay3/nm-eval-web.git
 2) cd nm-eval-web
 3) npm install
-4) npm start (Ignore the warnings and error)
-5) npm run serve
+4) npm start
 
 Browse to the application at [http://localhost:3000]
 
