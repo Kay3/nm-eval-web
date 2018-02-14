@@ -35,7 +35,7 @@ export class SortPipe  implements PipeTransform {
     const isDeepLink = expression && expression.indexOf('.') !== -1;
 
     if (isDeepLink) {
-      expression = OrderPipe.parseExpression(expression);
+      expression = SortPipe.parseExpression(expression);
     }
 
     let array: any[] = value.sort((a: any, b: any): number => {
@@ -47,7 +47,7 @@ export class SortPipe  implements PipeTransform {
         return a[expression] > b[expression] ? 1 : -1;
       }
 
-      return OrderPipe.getValue(a, expression) > OrderPipe.getValue(b, expression) ? 1 : -1;
+      return SortPipe.getValue(a, expression) > SortPipe.getValue(b, expression) ? 1 : -1;
     });
 
     if (reverse) {
@@ -67,14 +67,14 @@ export class SortPipe  implements PipeTransform {
    * @returns {any[]}
    */
   private transformObject(value: any | any[], expression?: any, reverse?: boolean): any {
-    let parsedExpression = OrderPipe.parseExpression(expression);
+    let parsedExpression = SortPipe.parseExpression(expression);
     let lastPredicate = parsedExpression.pop();
-    let oldValue = OrderPipe.getValue(value, parsedExpression);
+    let oldValue = SortPipe.getValue(value, parsedExpression);
 
     if (!(oldValue instanceof Array)) {
       parsedExpression.push(lastPredicate);
       lastPredicate = null;
-      oldValue = OrderPipe.getValue(value, parsedExpression);
+      oldValue = SortPipe.getValue(value, parsedExpression);
     }
 
     if (!oldValue) {
@@ -82,7 +82,7 @@ export class SortPipe  implements PipeTransform {
     }
 
     const newValue = this.transform(oldValue, lastPredicate, reverse);
-    OrderPipe.setValue(value, newValue, parsedExpression);
+    SortPipe.setValue(value, newValue, parsedExpression);
     return value;
   }
 
@@ -131,5 +131,4 @@ export class SortPipe  implements PipeTransform {
 
     object[expression[i]] = value;
   }
-}
 }
