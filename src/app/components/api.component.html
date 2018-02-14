@@ -1,0 +1,17 @@
+
+<div class="container">
+  <div class="jumbotron">
+    <h2>Welcome</h2>
+    <h3>A List with Angular & Bootstrap</h3>
+  </div>
+  <div class="panel panel-primary">
+    <div class="panel-heading">DOG Breed - Terrier</div>
+    <div class="panel-body">
+      <input class="form-control" [(ngModel)]="searchText" placeholder="search text goes here">
+        <li class="list-group-item" *ngFor="let dog of dogs | sort: order : false : 'case-insensitive' | filter : searchText">
+          {{dog}}
+        </li>
+
+    </div>
+  </div>
+</div>
