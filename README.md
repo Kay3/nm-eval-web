@@ -1,24 +1,23 @@
-Stack
-======
-Persistence : Open Public API https://dog.ceo/api/breed/terrier/list
-Backend Service: Node.js and Express Framework - https://github.com/Kay3/nm-eval-myappserver.git
-Web: AngularJS on the client - CSS based on bootstrap
+Development Stack
+=================
+- Persistence : Open Public API https://dog.ceo/api/breed/terrier/list
+- Backend Service: Node.js and Express Framework - https://github.com/Kay3/nm-eval-myappserver.git
+- Web: AngularJS on the client - CSS based on bootstrap
 
 Good solution would be to host Web - Angular app on S3 and your Backend NodeJS API on a service like Heroku. 
 
 Installation
 ============
-Set up the Backend Service before running this app => Check https://github.com/Kay3/nm-eval-myappserver/blob/master/README.md
+Set up the Backend Service before running this web app => Check https://github.com/Kay3/nm-eval-myappserver/blob/master/README.md
 
-Install Node.js - require Node 6.9.0 or higher
-Node.js comes with a package manager called npm for installing NodeJS applications and libraries.
+Node.js - require Node 6.9.0 or higher.
 
 Get the Code
 Either clone this repository or fork it on GitHub and clone your fork:
-> git clone https://github.com/Kay3/nm-eval-web.git
-> cd nm-eval-web
-> npm install
-> npm run serve
+1) git clone https://github.com/Kay3/nm-eval-web.git
+2) cd nm-eval-web
+3) npm install
+4) npm run serve
 
 Browse to the application at [http://localhost:3000]
 
