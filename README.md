@@ -2,7 +2,7 @@ Development Stack
 =================
 - Persistence : Open Public API https://dog.ceo/api/breed/terrier/list
 - Backend Service: Node.js and Express Framework - https://github.com/Kay3/nm-eval-myappserver.git
-- Web: AngularJS on the client - CSS based on bootstrap
+- Web: AngularJS - CSS based on bootstrap
 
 Good solution would be to host Web - Angular app on S3 and your Backend NodeJS API on a service like Heroku. 
 
